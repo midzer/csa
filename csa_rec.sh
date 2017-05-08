@@ -24,4 +24,4 @@ compressible="css|js|svg|htm[l]?|xml"
 # Enter directory to start (recursively) looking for compressible files
 dir="/usr/local/www/data"
 
-find -E $dir -regex ".*\.($compressible)" -exec sh -x $csa {} \; 
+find $dir -regextype posix-extended -regex ".*\.($compressible)" -exec sh -x $csa {} \;
